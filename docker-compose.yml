@@ -1,0 +1,27 @@
+version: "3"
+services:
+  web:
+    container_name: docker-node-mongo-prod
+    restart: always
+    volumes: ["./:/usr/src/app"]
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  dev:
+    container_name: docker-node-mongo-dev
+    # restart: always
+    # command: nodemon -L --watch . -e js,html,css server.js
+    command: nodemon -L --watch . -e js server.js
+    volumes: ["./:/usr/src/app"]
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27027:27017"

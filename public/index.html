@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Expense Calculator</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header></header>
+  <section id="input">
+    <form>
+      <select id="selector">
+        <option value="+">+</option>
+        <option value="-">-</option>
+      </select>
+      <input type="text" name="desc" id="desc" placeholder="Add some description here...." required>
+      <input type="number" name="value" id="value" placeholder="Value" required>
+      <input type="submit" value="&#10003;">
+    </form>
+  </section>
+  <main>
+    <section id="income"></section>
+    <section id="expense"></section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
