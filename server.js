@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 // Importing router modules
-let item = require("./router/items");
+let item = require("./routes/items");
 
 // Importing keys
 const keys = require("./config/keys");
